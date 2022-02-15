@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block body_class %}template-homepage{% endblock %}
-
 {% block extra_css %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-{% include 'home/welcome_page.html' %}
+<div 
+    id="background"
+    class=""
+    style="
+        background-color: #060606;
+        opacity: 0.3;
+        background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #060606 40px ), repeating-linear-gradient( #f7060655, #f70606 );
+    "
+></div>
 
 {% endblock content %}
