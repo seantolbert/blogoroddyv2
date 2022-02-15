@@ -10,17 +10,7 @@ from wagtail.core import blocks
 class HomePage(Page):
     headline = models.CharField(max_length=100, blank=True, null=True)
     
-    banner_photo = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL
-    )
-    excerpt = models.CharField(max_length=250, blank=True, null=True)
-
     content_panels = Page.content_panels + [
         FieldPanel('headline'),
-        ImageChooserPanel('banner_photo'),
-        FieldPanel('excerpt')
     ]
 

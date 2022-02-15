@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <h1 class="display-4 pt-5 text-center">Our Blog</h1>
+        </div>
+    </div>
+    {% for post in page.get_children.live %}
+        <h2>
+            <a href="{% pageurl post.specific %}">
+                {{post.specific.title}}
+            </a>
+        </h2>
+        <p>
+            {{post.specific.description}}
+        </p>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock content %}

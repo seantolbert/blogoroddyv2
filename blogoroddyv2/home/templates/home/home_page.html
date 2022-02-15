@@ -1,11 +1,17 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
-{% endblock extra_css %}
+{% extends "base.html" %} 
+{% load wagtailcore_tags %} 
 
 {% block content %}
+<div class="border-bottom p-5 bg-info bg-opacity-50">
+  <h1 class="display-4 text-center">{{page.headline}}</h1>
+</div>
+<br />
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
 
-
+            <h4 class="display-4">{{page.description|richtext}}</h4>
+        </div>
+    </div>
+</div>
 {% endblock content %}
