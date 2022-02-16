@@ -8,11 +8,17 @@ from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
 
-
 class BlogIndexPage(Page):
-    pass
+    
+    def get_context(self, request):
+        context = super().get_context(request)
+        context['children'] = BlogPage.objects.child_of(self).live().order_by('-date')
+        return context
+
 
 class BlogPage(Page):
+    date = models.DateField(blank=True, null=True)
+
     description = models.CharField(max_length=255, blank = True, null = True)
     
     main_image = models.ForeignKey(
@@ -26,13 +32,15 @@ class BlogPage(Page):
 
     content = StreamField(
         [
-        ('heading', blocks.CharBlock()),
-        ('content', blocks.RichTextBlock()),
-        ('image', ImageChooserBlock())
-        ], blank=True, null=True
+            ('heading', blocks.CharBlock()),
+            ('content', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock())
+        ], 
+        blank=True, null=True
     )
 
     content_panels = Page.content_panels + [
+        FieldPanel('date'),
         FieldPanel('description'),
         ImageChooserPanel('main_image'),
         FieldPanel('main_image_excerpt'),
