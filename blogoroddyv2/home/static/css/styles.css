@@ -19,5 +19,9 @@
     position: absolute;
     top: 25%;
     left: 25%;
-    border-radius: 20px;
+    font-family: 'Merriweather', serif;
+    color: rgb(104, 104, 104);
+    border-radius: 5px;
 }
+
+
