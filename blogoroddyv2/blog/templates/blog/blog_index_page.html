@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load wagtailcore_tags %} {% block content %}
+{% extends 'base.html' %} {% load wagtailcore_tags %} {% load wagtailimages_tags%} {% block content %}
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -6,20 +6,35 @@
     </div>
   </div>
   {% for post in page.get_children.live %}
-  <div class="border p-4 bg-dark bg-opacity-25 rounded-pill">
-    <div class="d-flex justify-content-end align-items-end flex-column">
-      <h2>
-        <a
-          class="display-6 text-decoration-none text-white"
-          href="{% pageurl post.specific %}"
-        >
-          {{post.specific.title}}
+  <div class="container">
+
+      <div class="border border-warning border-5 p-4 bg-opacity-0 rounded-pill col-8 mx-auto my-3">
+          <a href="{% pageurl post.specific %}" class="text-decoration-none text-muted">
+              
+              <div class="d-flex flex-row">
+                  {% image post.specific.main_image fill-150x150 as mtn_photo %}
+                  <img
+                  class="rounded-circle"
+                  src="{{mtn_photo.url}}"
+                  alt="{{mtn_photo.title}}"
+                  width="{{mtn_photo.width}}"
+                  height="{{mtn_photo.height}}"
+                  />
+                  <div class="d-flex p-3 justify-content-center flex-column">
+                      <h2>
+                          <span
+                          class="display-6 text-decoration-none"
+                          href="{% pageurl post.specific %}"
+                          >
+                          {{post.specific.title}}
+                        </span>
+                    </h2>
+                    <p>{{post.specific.description}}</p>
+                </div>
+            </div>
         </a>
-      </h2>
-      <p>{{post.specific.description}}</p>
     </div>
-  </div>
-  <hr />
+</div>
   {% endfor %}
 </div>
 {% endblock content %}
