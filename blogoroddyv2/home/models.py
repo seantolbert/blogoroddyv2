@@ -14,3 +14,9 @@ class HomePage(Page):
         FieldPanel('headline'),
     ]
 
+class AboutPage(Page):
+    name = models.CharField(max_length=100, blank=True, null=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('name')
+    ]
