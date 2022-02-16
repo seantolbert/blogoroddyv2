@@ -3,8 +3,3 @@
 body {
     font-family: 'Merriweather', serif;
 }
-
-#yell-hov:hover,
-#yell-hov:active {
-    color: #ffe074;
-}
