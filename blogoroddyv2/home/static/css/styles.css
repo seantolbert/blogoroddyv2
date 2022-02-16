@@ -14,3 +14,10 @@
     font-family: 'Merriweather', serif;
     color: #ffe074;
 }
+
+.about-box {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 20px;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="about-page">
+    <div class="background"></div>
+    <div class="about-box bg-light w-50 p-5">
+        <div class="container text-center">
+            <h3 class="display-5">{{page.title}}</h3>
+            <p>{{page.description}}</p>
+            <hr>
+            <p>{{page.email}}</p>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
