@@ -1,24 +1,25 @@
-{% extends 'base.html' %}
-{% load wagtailcore_tags %}
-
-{% block content %}
+{% extends 'base.html' %} {% load wagtailcore_tags %} {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-
-            <h1 class="display-4 pt-5 text-center">Our Blog</h1>
-        </div>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4 pt-5 mt-5 text-center">All Posts</h1>
     </div>
-    {% for post in page.get_children.live %}
-        <h2>
-            <a href="{% pageurl post.specific %}">
-                {{post.specific.title}}
-            </a>
-        </h2>
-        <p>
-            {{post.specific.description}}
-        </p>
-        <hr>
-    {% endfor %}
+  </div>
+  {% for post in page.get_children.live %}
+  <div class="border p-4 bg-dark bg-opacity-25 rounded-pill">
+    <div class="d-flex justify-content-end align-items-end flex-column">
+      <h2>
+        <a
+          class="display-6 text-decoration-none text-white"
+          href="{% pageurl post.specific %}"
+        >
+          {{post.specific.title}}
+        </a>
+      </h2>
+      <p>{{post.specific.description}}</p>
+    </div>
+  </div>
+  <hr />
+  {% endfor %}
 </div>
 {% endblock content %}
