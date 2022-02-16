@@ -16,7 +16,7 @@
 }
 
 .about-box {
-    position: absolute;
+    /* position: absolute; */
     top: 25%;
     left: 25%;
     font-family: 'Merriweather', serif;

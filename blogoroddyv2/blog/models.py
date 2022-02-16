@@ -22,6 +22,8 @@ class BlogPage(Page):
         on_delete=models.SET_NULL
     )
 
+    main_image_excerpt = models.CharField(max_length=300, blank=True, null=True)
+
     content = StreamField(
         [
         ('heading', blocks.CharBlock()),
@@ -33,5 +35,6 @@ class BlogPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('description'),
         ImageChooserPanel('main_image'),
+        FieldPanel('main_image_excerpt'),
         StreamFieldPanel('content'),
     ]

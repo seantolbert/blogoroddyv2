@@ -1,16 +1,20 @@
-{% extends 'base.html' %}
-{% load wagtailcore_tags %}
-
-{% block content %}
+{% extends 'base.html' %} {% load wagtailcore_tags %} {% load wagtailimages_tags %} {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-
-            <h1 class="display-4 text-center pt-5">{{page.title}}</h1>
-            <h4><em>{{page.description}}</em></h4>
-            <p>{% include_block page.content %}</p>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-4 text-center mt-5 py-5">{{page.title}}</h1>
+      <div class="container-fluid">
+        {% image page.main_image original as main_photo%}
+        <div class="container-fluid d-flex justify-content-center flex-column">
+            <img class="img-fluid mb-0" src="{{main_photo.url}}" alt="{{main_photo.title}}">
+            <p class="d-flex mb-4 justify-content-end">-{{page.main_image_excerpt}}</p>
+            <div class="font-monospace">
+                <p class="px-4">{% include_block page.content %}</p>
+            </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 {% endblock content %}
