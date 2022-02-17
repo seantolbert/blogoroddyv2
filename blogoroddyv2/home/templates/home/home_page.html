@@ -1,25 +1,40 @@
-{% extends "base.html" %}
-{% load static wagtailcore_tags wagtailimages_tags %} 
-
+{% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-{% endblock %}
-
-{% block content %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock %} {% block content %}
 <main class="home-page">
-    <div class="background"></div>
-    <div class="p-5">
-        <h1 class="mt-5 display-2 text-center title-font">{{page.headline}}</h1>
-    </div>
-    <div class="container" id="blog-posts">
-        <div class="bg-dark text-light">
-           {% for blog in page.blogs %}
-           <div class="m-4">
-               {{blog.specific.title}}
-            </div>
-           {% endfor %}
+  <div class="background"></div>
+  <div class="p-5">
+    <h1 class="mt-5 display-2 text-center title-font">{{page.headline}}</h1>
+  </div>
+  <div class="container">
+    <div class="mx-5 justify-content-center">
+      <div class="bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto">
+        {% for blog in page.blogs %}
+        <div class="col-4 p-3 justify-content-center">
+          <div class="col-6 mx-auto px-2">
+            <a
+              href="{% pageurl blog.specific %}"
+              class="text-decoration-none text-white"
+            >
+              {% image blog.specific.main_image fill-150x150 as main_photo %}
+              <img
+                src="{{main_photo.url}}"
+                class="rounded justify-content-center"
+                alt="{{main_photo.title}}"
+                width="{{main_photo.width}}"
+                height="{{main_photo.height}}"
+              />
+              <span> {{blog.specific.title}} </span>
+              <br />
+              <span> {{blog.specific.description}} </span>
+            </a>
+          </div>
         </div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
 </main>
-    
+
 {% endblock content %}
