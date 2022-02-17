@@ -1,7 +1,10 @@
 {% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} {% block content %}
+{% endblock %} 
+
+{% block content %}
 <main class="home-page">
   <div class="background"></div>
   <div class="p-5">
@@ -9,8 +12,10 @@
   </div>
   <div class="container mb-2">
     <div class="mx-5 justify-content-center">
-      <div class="bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto">
-          <h4 class="display-5">Latest posts</h4>
+      <div
+        class="bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
+      >
+        <h4 class="display-5">Latest posts</h4>
         {% for blog in page.blogs %}
         <div class="col-4 p-3 justify-content-center">
           <div class="col-6 mx-auto px-2">
@@ -18,17 +23,28 @@
               href="{% pageurl blog.specific %}"
               class="text-decoration-none text-white"
             >
-              {% image blog.specific.main_image fill-150x150 as main_photo %}
+              {% image blog.specific.main_image fill-250x150 as main_photo %}
               <img
                 src="{{main_photo.url}}"
-                class="rounded justify-content-center"
+                class="rounded justify-content-center img-fluid mb-2"
                 alt="{{main_photo.title}}"
                 width="{{main_photo.width}}"
                 height="{{main_photo.height}}"
               />
-              <span class="py-1" style="font-family: 'Montserrat', sans-serif; font-weight: bold;"> {{blog.specific.title}} </span>
+              <span
+                class=""
+                style="
+                  font-family: 'Montserrat', sans-serif;
+                  font-weight: bold;
+                  font-size: 15px;
+                "
+              >
+                {{blog.specific.title}}
+              </span>
               <br />
-              <span class="font-monospace" style="font-size: 11px;"> {{blog.specific.description}} </span>
+              <span class="font-monospace" style="font-size: 11px">
+                {{blog.specific.description}}
+              </span>
             </a>
           </div>
         </div>

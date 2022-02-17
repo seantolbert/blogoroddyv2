@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static wagtailimages_tags %}
+
+{% block content %}
+<h1>Gallery Index</h1>
+{% for post in page.posts %}
+
+{% image post.specific.gallery_photo fill-300x300 as photo %}
+    <img src="{{photo.url}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
+{% endfor %}
+{% endblock content %}
