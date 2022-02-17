@@ -29,10 +29,10 @@
         {% include 'navbar.html' %}
         {% block content %}
         {% endblock %}
+        {% include 'footer.html' %}
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/blogoroddyv2.js' %}"></script>
-
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
