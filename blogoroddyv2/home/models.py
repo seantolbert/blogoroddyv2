@@ -4,6 +4,7 @@ from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel
 
 from blog.models import BlogPage
+from gallery.models import GalleryPage
 
 class HomePage(Page):
     headline = models.CharField(max_length=100, blank=True, null=True)
@@ -16,3 +17,8 @@ class HomePage(Page):
         blogs = BlogPage.objects.live()
         blogs = blogs.order_by('-date')[:3]
         return blogs
+    
+    def photos(self):
+        photos = GalleryPage.objects.live()
+        photos = photos.order_by('-date')[:3]
+        return photos
