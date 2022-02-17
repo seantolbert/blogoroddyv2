@@ -7,15 +7,6 @@ from wagtail.core.fields import StreamField
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
-
-class BlogIndexPage(Page):
-    
-    def get_context(self, request):
-        context = super().get_context(request)
-        context['children'] = BlogPage.objects.live().order_by('-date')
-        return context
-
-
 class BlogPage(Page):
     date = models.DateField(blank=True, null=True)
 
@@ -46,3 +37,10 @@ class BlogPage(Page):
         FieldPanel('main_image_excerpt'),
         StreamFieldPanel('content'),
     ]
+
+class BlogIndexPage(Page):
+    
+    def blogs(self):
+        blogs = BlogPage.objects.live()
+        blogs = blogs.order_by('-date')
+        return blogs

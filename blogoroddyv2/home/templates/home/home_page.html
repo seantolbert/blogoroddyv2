@@ -14,7 +14,9 @@
     <div class="container" id="blog-posts">
         <div class="bg-dark text-light">
            {% for blog in page.blogs %}
-            {{blog.specific.title}}
+           <div class="m-4">
+               {{blog.specific.title}}
+            </div>
            {% endfor %}
         </div>
     </div>
