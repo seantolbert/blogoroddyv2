@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load static %} 
-{% load wagtailcore_tags %}
+{% load static wagtailcore_tags wagtailimages_tags %} 
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -14,7 +13,9 @@
     </div>
     <div class="container" id="blog-posts">
         <div class="bg-dark text-light">
-           
+           {% for blog in page.blogs %}
+            {{blog.specific.title}}
+           {% endfor %}
         </div>
     </div>
 </main>

@@ -12,7 +12,7 @@ class BlogIndexPage(Page):
     
     def get_context(self, request):
         context = super().get_context(request)
-        context['children'] = BlogPage.objects.child_of(self).live().order_by('-date')
+        context['children'] = BlogPage.objects.live().order_by('-date')
         return context
 
 
