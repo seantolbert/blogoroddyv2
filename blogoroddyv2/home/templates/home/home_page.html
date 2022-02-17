@@ -10,6 +10,7 @@
   <div class="container">
     <div class="mx-5 justify-content-center">
       <div class="bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto">
+          <h4 class="display-5">Latest posts</h4>
         {% for blog in page.blogs %}
         <div class="col-4 p-3 justify-content-center">
           <div class="col-6 mx-auto px-2">
@@ -25,9 +26,9 @@
                 width="{{main_photo.width}}"
                 height="{{main_photo.height}}"
               />
-              <span> {{blog.specific.title}} </span>
+              <span class="py-1" style="font-family: 'Montserrat', sans-serif; font-weight: bold;"> {{blog.specific.title}} </span>
               <br />
-              <span> {{blog.specific.description}} </span>
+              <span class="font-monospace" style="font-size: 11px;"> {{blog.specific.description}} </span>
             </a>
           </div>
         </div>
