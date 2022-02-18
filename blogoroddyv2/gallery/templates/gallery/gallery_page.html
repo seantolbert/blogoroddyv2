@@ -1,13 +1,23 @@
 {% extends 'base.html' %} 
 {% load static wagtailcore_tags wagtailimages_tags %} 
 
-{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
 
+{% block content %}
 <main>
-  <div class="container mt-5">
-    <h2 class="display-4">{{page.title}}</h2>
-  </div>
-  <div>{% image page.gallery_photo width-1000 %}</div>
+  <section class="gallery-photo-details">
+    <div class="d-flex justify-content-center">
+
+      <div class="p-3 border border-dark border-3">
+        {% image page.gallery_photo max-600x1200 as photo %}
+        <img class="img-fluid" src="{{photo.url}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
+      </div>
+      <!-- <small class="text-right">-{{page.title}}</small> -->
+      <br>
+    </div>
+  </section>
 </main>
 
 {% endblock %}
