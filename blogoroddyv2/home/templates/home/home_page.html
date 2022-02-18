@@ -17,24 +17,29 @@
         class="shadow-lg mb-3 p-3 bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
       >
         <h4 class="display-5">Latest Blog Posts</h4>
-        {% for blog in page.blogs %}
-        <div class="col-4 p-3 justify-content-center">
-          <a href="{% pageurl blog.specific %}" class="text-decoration-none text-black">
-            <div class="card" style="width: 18rem">
-              {% image blog.specific.main_image fill-250x250 as main_photo %}
-              <img
-                src="{{main_photo.url}}"
-                class="card-img-top"
-                alt="{{main_photo.title}}"
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{blog.specific.title}}</h5>
-                <p class="card-text font-monospace">{{blog.specific.description}}</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for blog in page.blogs %}
+          <div class="col">
+            <a
+              href="{% pageurl blog.specific %}"
+              class="text-decoration-none text-black"
+            >
+              <div class="card">
+                {% image blog.specific.main_image fill-350x250 as photo %}
+                <img
+                  src="{{photo.url}}"
+                  class="card-img-top"
+                  alt="{{photo.title}}"
+                  height="{{photo.height}}"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">{{blog.specific.title}}</h5>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>

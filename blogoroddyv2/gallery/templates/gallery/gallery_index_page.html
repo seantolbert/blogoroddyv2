@@ -1,27 +1,26 @@
-{% extends 'base.html' %} 
-{% load static wagtailimages_tags wagtailcore_tags %}
+{% extends 'base.html' %} {% load static wagtailimages_tags wagtailcore_tags %}
+
+
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} 
-
-{% block content %}
+{% endblock %} {% block content %}
 <h1 class="gallery-header">Gallery Index</h1>
-<section>
-  <div class="container" id="gallery">
-    {% for post in page.posts %}
-    <a href="{% pageurl post.specific %}" class="">
-      {% image post.specific.gallery_photo max-400x400 as photo %}
+<section class="gallery-section">
+  {% for post in page.posts %}
+  <div class="gallery-photo__container">
+    <a href="{% pageurl post.specific %}" class="text-decoration-none">
+      {% image post.specific.gallery_photo fill-400x300 format-jpeg as photo %}
       <img
-        class="photo"
+        class="gallery-photo"
         src="{{photo.url}}"
         alt="{{photo.title}}"
         width="{{photo.width}}"
         height="{{photo.height}}"
       />
     </a>
-    {% endfor %}
   </div>
+  {% endfor %}
 </section>
 
 {% endblock content %}

@@ -1,83 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap");
 
 .background {
-    background-image: url(./images/background.jpg);
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
+  background-image: url(./images/background.jpg);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .title-font {
-    font-family: 'Merriweather', serif;
-    color: #ffe074;
+  font-family: "Merriweather", serif;
+  color: #ffe074;
 }
 
 .about-box {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    font-family: 'Merriweather', serif;
-    color: rgb(104, 104, 104);
-    border-radius: 5px;
-    box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-        inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.4s ease;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  font-family: "Merriweather", serif;
+  color: rgb(104, 104, 104);
+  border-radius: 5px;
+  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
+    inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease;
 }
 
 .blog-post-box {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-        inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.4s ease;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
+    inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease;
 }
 
 .blog-post-box:hover {
-    box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-      inset -20px -20px 18px 0 rgba(0, 0, 0, 0.3);
-  }
+  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
+    inset -20px -20px 18px 0 rgba(0, 0, 0, 0.3);
+}
+
+
 
 .gallery-header {
-    margin-top: 100px;
-    margin-left: 50px;
+  margin-top: 100px;
+  margin-left: 50px;
 }
 
-#gallery {
-    column-count: 4;
-    column-gap: 20px;
-}
-@media (max-width:1200px){
-    #gallery {
-        column-count: 3;
-        column-gap: 20px;
-    }
-}
-@media (max-width:800px ){
-    #gallery{
-        column-count: 2;
-        column-gap: 20px;
-    }
-}
-@media (max-width:600px ){
-    #gallery{
-        column-count: 1;
-        column-gap: 20px;
-    }
-} */
-
-.photo {
-    width: 100%;
-    height: auto;
-    margin: 10px;
-    box-shadow: -3px 5px 15px #000;
-    cursor: pointer;
-    transition: all 0.2s;
-    border: 2px solid black;
+.gallery-section {
+  padding: 0.5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
 }
 
+.gallery-photo__container {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: 0.5vw;
+}
 
+.gallery-photo {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 400px) {
+  header div {
+    margin: 0;
+  }
+  header {
+    padding: 0;
+  }
+}
