@@ -18,8 +18,3 @@ class HomePage(Page):
         blogs = BlogPage.objects.live()
         blogs = blogs.order_by("-date")[:3]
         return blogs
-
-    def photos(self):
-        photos = GalleryPage.objects.live()
-        photos = photos.order_by("-date")[:3]
-        return photos

@@ -14,7 +14,7 @@
   <div class="container mb-2">
     <div class="mx-5 justify-content-center">
       <div
-        class=" mb-3 p-3 bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
+        class="shadow-lg mb-3 p-3 bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
       >
         <h4 class="display-5">Latest Blog Posts</h4>
         {% for blog in page.blogs %}
@@ -30,28 +30,6 @@
               <div class="card-body">
                 <h5 class="card-title">{{blog.specific.title}}</h5>
                 <p class="card-text font-monospace">{{blog.specific.description}}</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-      <div
-        class=" p-3 bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
-      >
-        <h4 class="display-5">Latest Gallery Posts</h4>
-        {% for photo in page.photos %}
-        <div class="col-4 p-3 justify-content-center">
-          <a href="{% pageurl photo.specific %}" class="text-decoration-none text-black">
-            <div class="card" style="width: 18rem">
-              {% image photo.specific.gallery_photo fill-250x250 as main_photo %}
-              <img
-                src="{{main_photo.url}}"
-                class="card-img-top"
-                alt="{{main_photo.title}}"
-              />
-              <div class="card-body">
-                <p class="card-text font-monospace">{{photo.specific.description}}</p>
               </div>
             </div>
           </a>
