@@ -10,12 +10,10 @@
   <section class="gallery-photo-details">
     <div class="d-flex justify-content-center">
 
-      <div class="p-3 border border-dark border-3">
-        {% image page.gallery_photo max-600x1200 as photo %}
-        <img class="img-fluid" src="{{photo.url}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
+      <div>
+        {% image page.gallery_photo max-400x1200 as photo %}
+        <img src="{{photo.url}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
       </div>
-      <!-- <small class="text-right">-{{page.title}}</small> -->
-      <br>
     </div>
   </section>
 </main>
