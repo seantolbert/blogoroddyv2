@@ -28,12 +28,13 @@
                 {% image blog.specific.main_image fill-350x250 as photo %}
                 <img
                   src="{{photo.url}}"
-                  class="card-img-top"
+                  class="card-img-top img-fluid"
                   alt="{{photo.title}}"
                   height="{{photo.height}}"
                 />
                 <div class="card-body">
                   <h5 class="card-title">{{blog.specific.title}}</h5>
+                  <p><small class="card-text text-muted p-0">{{blog.specific.date}}</small></p>
                 </div>
               </div>
             </a>
