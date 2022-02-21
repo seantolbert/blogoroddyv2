@@ -6,23 +6,26 @@
 {% endblock %} 
 
 {% block content %}
-<h1 class="gallery-header">Gallery Index</h1>
-<section class="gallery-section">
-  {% for post in page.posts %}
-  <div class="gallery-photo__container">
-    <a href="{% pageurl post.specific %}" class="text-decoration-none">
-      {% image post.specific.gallery_photo fill-400x300 format-jpeg as photo %}
-      <img
+<main>
+<div class="blog-background"></div>
+  <h1 class="gallery-header">Gallery Index</h1>
+  <section class="gallery-section">
+    {% for post in page.posts %}
+    <div class="gallery-photo__container">
+      <a href="{% pageurl post.specific %}" class="text-decoration-none">
+        {% image post.specific.gallery_photo fill-400x300 format-jpeg as photo %}
+        <img
         class="gallery-photo"
         src="{{photo.url}}"
         alt="{{photo.title}}"
         width="{{photo.width}}"
         height="{{photo.height}}"
-      />
-    </a>
-  </div>
-  {% endfor %}
-</section>
-
+        />
+      </a>
+    </div>
+    {% endfor %}
+  </section>
+  
+</main>
 
 {% endblock content %}
