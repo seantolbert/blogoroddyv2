@@ -13,7 +13,7 @@
 }
 
 .blog-background {
-  background: linear-gradient(rgb(253, 249, 217), white );
+  background: rgb(253, 249, 217);
   position: fixed;
   top: 0;
   background-repeat: no-repeat;
@@ -121,3 +121,37 @@
   margin: 100px;
   z-index: -10;
 }
+
+.search-title {
+  margin: 60px 0 20px 0;
+}
+
+.search-form {
+  width: 70%;
+}
+
+.search-result-list {
+  list-style-type: none;
+}
+
+.search-result-item {
+  margin-top: 20px;
+}
+
+.search-no-result-item {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 400px) {
+
+  .search-title {
+    margin: 60px 0 0 0;
+  }
+  
+  .search-form {
+    margin: 20px 30px 0 30px;
+    width: 90%;
+  }
+  
+}
+
