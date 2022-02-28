@@ -24,7 +24,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/blogoroddyv2.css' %}">
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body>
+        <div class="background"></div>
         {% wagtailuserbar %}
         {% include 'navbar.html' %}
         {% block content %}

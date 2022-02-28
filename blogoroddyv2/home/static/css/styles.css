@@ -1,7 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap"); */
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(225, 225, 225, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5% 10%;
+  margin: 20px 40px;
+}
 
+.card {
+  width: 30%;
+  margin: 1%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1%;
+}
 
+.card-img {
+  height: 100%;
+  object-fit: center;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-buttons {
+  display: flex;
+}
+
+.card-button {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s linear; 
+  margin-right: 1%;
+}
+
+.card-button:hover {
+  font-size: 1.1em;
+  background: rgba(225, 225, 225, 0.8);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+.card-heading,
+.card-subtitle,
+.card-description{
+  margin-bottom: 10px;
+}
+
+/* 
 .background {
   background-image: url(./images/background.jpg);
   height: 100vh;
@@ -92,11 +164,11 @@
 .gallery-photo {
   width: 100%;
   height: auto;
-}
+} */
 
 
 
-
+/* 
 .gallery-photo-details {
   margin: 100px;
   z-index: -10;
@@ -149,5 +221,5 @@
     margin: 20px 30px 0 30px;
     width: 90%;
   }
-}
+} */
 
