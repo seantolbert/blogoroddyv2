@@ -25,18 +25,8 @@
             <p class="d-flex mb-4 justify-content-end text-muted">
               <small>-{{page.main_image_excerpt}}</small>
             </p>
-            <div class="font-monospace">
-              {% for block in page.content %}
-                {% if block.block_type == 'image' %}
-                  <div class="image-container">
-                    {{ block.value }}
-                  </div>
-                {% else %}
-                  <section class="px-4 block-{{ block.block_type }}">
-                    {% include_block block %}
-                  </section>
-                {% endif %}
-              {% endfor %}
+            <div class="font-monospace container-fluid">
+              <p class="px-4">{% include_block page.content %}</p>
             </div>
           </div>
         </div>
