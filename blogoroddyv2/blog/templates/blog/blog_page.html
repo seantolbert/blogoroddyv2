@@ -26,7 +26,17 @@
               <small>-{{page.main_image_excerpt}}</small>
             </p>
             <div class="font-monospace">
-              <p class="px-4">{% include_block page.content %}</p>
+              {% for block in page.content %}
+                {% if block.block_type == 'image' %}
+                  <div class="image-container">
+                    {{ block.value }}
+                  </div>
+                {% else %}
+                  <section class="px-4 block-{{ block.block_type }}">
+                    {% include_block block %}
+                  </section>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
         </div>
