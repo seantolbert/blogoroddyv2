@@ -12,20 +12,21 @@
     <h1 class="home__heading">{{ page.headline }}</h1>
   </div> 
   <div class="card-container">
+    <h4 class="card-container__header">Lastest Posts</h4>
     {% for blog in page.blogs %}
     <div class="card">
-      {% image blog.specific.main_image fill-350x250 as photo %}
+      {% image blog.specific.main_image fill-250x250 as photo %}
         <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img">
         <div class="card-details">
           <h2 class="card-heading">
             {{blog.specific.title}}
           </h2>
           <h5 class="card-subtitle">
-            {{page.specific.date}}
+            {{blog.specific.date}}
           </h5>
-          <p class="card-description">
+          <!-- <p class="card-description">
             {{blog.specific.description}}
-          </p>
+          </p> -->
           <div class="card-buttons">
             <a href="{% pageurl blog.specific %}" class="card-button">
               Read on
