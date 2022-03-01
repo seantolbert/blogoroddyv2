@@ -10,7 +10,6 @@
   <div class="home__heading-container">
     <h1 class="home__heading">{{ page.headline }}</h1>
   </div>
-
   <h4 class="card-container__header">Lastest Posts</h4>
   <div class="card-container">
     {% for blog in page.blogs %}
@@ -19,13 +18,10 @@
       <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
       <div class="card-details">
         <h2 class="card-heading">{{blog.specific.title}}</h2>
-        <h5 class="card-subtitle">{{blog.specific.date}}</h5>
-        <!-- <p class="card-description">
-            {{blog.specific.description}}
-          </p> -->
+        <h5 class="card-date">{{blog.specific.date}}</h5>
         <div class="card-buttons">
           <a href="{% pageurl blog.specific %}" class="card-button">
-            Read on
+            Read
           </a>
         </div>
       </div>

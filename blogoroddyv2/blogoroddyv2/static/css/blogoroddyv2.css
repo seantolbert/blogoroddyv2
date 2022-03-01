@@ -16,6 +16,7 @@ body {
 
 .background {
   background-image: url(../images/background.jpg);
+  filter: brightness(80%);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -25,4 +26,174 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1;
+}
+
+/* Footer */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #3a4d7c;
+  color: #fff;
+}
+
+.content .container h1 {
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+.content .container p {
+  color: #ccc;
+}
+
+.content .container p a {
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  background-color: #1e3161;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .row {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.container .row:nth-child(2) {
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 1rem;
+}
+
+.row .col {
+  height: 100%;
+  align-self: flex-start;
+}
+
+.col h3 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  list-style-type: none;
+  margin: 0.75rem 0;
+}
+
+ul li a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+ul li a:hover {
+  background-color: #5ac1d8;
+}
+
+.container .row:nth-child(2) ul {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container .row:nth-child(2) ul li a {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.container .row:nth-child(2) ul li a:hover {
+  background-color: transparent;
+}
+
+.language ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.language ul li {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.socail ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.socail ul li {
+  margin-right: 0.5rem;
+}
+
+.socail ul li a {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .container .row {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col h3 {
+    font-size: 24px;
+  }
+
+  .language {
+    margin: 1rem 0;
+  }
+
+  ul li a {
+    font-size: 16px;
+  }
+
+  .container .row:nth-child(2) ul li a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .col h3 {
+    font-size: 18px;
+  }
+
+  .language {
+    margin: 0.5rem 0;
+  }
+
+  ul li a {
+    font-size: 14px;
+  }
+
+  .container .row:nth-child(2) ul li a {
+    font-size: 12px;
+  }
 }
