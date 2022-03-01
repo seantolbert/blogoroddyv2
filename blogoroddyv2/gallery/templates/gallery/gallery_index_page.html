@@ -7,12 +7,11 @@
 
 {% block content %}
 <main>
-<div class="blog-background"></div>
-  <h1 class="gallery-header">Gallery Index</h1>
+  <h1 class="gallery-header">Gallery</h1>
   <section class="gallery-section">
     {% for post in page.posts %}
     <div class="gallery-photo__container">
-      <a href="{% pageurl post.specific %}" class="text-decoration-none">
+      <a href="{% pageurl post.specific %}" class="gallery-photo__link">
         {% image post.specific.gallery_photo fill-400x300 format-jpeg as photo %}
         <img
         class="gallery-photo"
@@ -25,7 +24,6 @@
     </div>
     {% endfor %}
   </section>
-  
 </main>
 
 {% endblock content %}
