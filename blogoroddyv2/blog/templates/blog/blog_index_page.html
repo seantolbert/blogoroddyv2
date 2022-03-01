@@ -32,40 +32,5 @@
     </a>
     {% endfor %}
   </div>
-
-  <!-- <div class="container">
-    <div>
-      <h1 class="display-4 pt-5 mt-5 text-center">All Posts</h1>
-    </div>
-    {% for post in page.blogs %}
-    <div class="container d-flex justify-content-center">
-      <a href="{% pageurl post.specific %}" class="text-decoration-none text-black">
-        <div class="card mb-3 p-1 blog-post-box">
-          <div class="row g-0">
-            <div class="col-md-4">
-              {% image post.specific.main_image fill-150x150 as photo %}
-              <img
-              src="{{photo.url}}"
-              class="img-fluid rounded blog-index-photo"
-              alt="{{photo.title}}"
-              width="{{photo.width}}"
-              height="{{photo.height}}"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title fw-bolder">{{post.specific}}</h5>
-                <p class="card-text">{{post.specific.description}}</p>
-                <p class="card-text">
-                  <small class="text-muted">{{post.specific.date}}</small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    {% endfor %}
-  </div> -->
 </main>
 {% endblock content %}

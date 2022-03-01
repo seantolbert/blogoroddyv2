@@ -47,8 +47,8 @@
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  background: rgb(205, 205, 205);
   color:#000000;
+  background: rgb(205, 205, 205);
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
   inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);  
   transition:transform 0.3s ease, box-shadow 0.3s ease;
@@ -124,13 +124,45 @@
 
 
 
+/* ABOUT PAGE */
+
+.about-container {
+  margin: 20% 10%;
+  background: rgb(205, 205, 205);
+  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
+  inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+.about-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2%;
+  color: black;
+  font-weight: bold;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+}
+
+.about-email {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 2%;
+  color: rgb(122, 120, 120);
+}
+
+
+
 /* BLOG INDEX PAGE */
 
-
-
-
 .index__header-container {
-
+  margin: 5%;
 }
 
 .index__header {
@@ -193,7 +225,7 @@
 }
 
 .post-description {
-
+  
 }
 
 
