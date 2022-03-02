@@ -7,16 +7,9 @@
 
 {% block content %}
 <main>
-  <div class="blog-background"></div>
-  <section class="gallery-photo-details">
-    <div class="d-flex justify-content-center">
-
-      <div>
-        {% image page.gallery_photo max-400x1200 as photo %}
-        <img class="p-2" src="{{photo.url}}" alt="{{photo.title}}" width="{{photo.width}}" height="{{photo.height}}">
-      </div>
-    </div>
-  </section>
+  <div class="gallery-page__container">
+    {% image page.gallery_photo original as photo %}
+    <img src="{{ photo.url }}" alt="{{ photo.title }}">
+  </div>
 </main>
-
 {% endblock %}

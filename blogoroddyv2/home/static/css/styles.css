@@ -202,7 +202,6 @@
 }
 
 .index__post:hover {
-  /* transform: translateX(5px); */
   box-shadow: 0 40px 68px 0 #888181, inset 0 -4px 12px 0 #eae7e7;
 }
 
@@ -313,8 +312,8 @@
   padding: 0.5vw;
   font-size: 0;
   display: -ms-flexbox;
-  /* -ms-flex-wrap: wrap;
-  -ms-flex-direction: column; */
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   display: -webkit-box;
@@ -342,115 +341,20 @@
   top: 3%;
 }
 
-/* 
-.background {
-  background-image: url(./images/background.jpg);
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
+
+
+
+
+/* GALLERY PAGE */
+
+.gallery-page__container {
+  margin: 5% 3%;
+  display: flex;
 }
 
-.title-font {
-  font-family: "Merriweather", serif;
-  color: #ffe074;
+.gallery-page__container img {
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-.blog-background {
-  background: rgb(253, 249, 217);
-  position: fixed;
-  top: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-}
-
-
-
-.about-box {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  right: 25%;
-  font-family: "Merriweather", serif;
-  color: rgb(104, 104, 104);
-  border-radius: 5px;
-  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-    inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease;
-}
-
-
-.blog-post-box {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  border-radius: 5px;
-  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-    inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease;
-  width: 600px;
-}
-
-
-.blog-post-box:hover,
-.blog-post-box:active {
-  box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
-    inset -20px -20px 18px 0 rgba(0, 0, 0, 0.3);
-} */
-
-/* 
-.search-title {
-  margin: 60px 0 20px 0;
-}
-
-.search-form {
-  width: 70%;
-}
-
-.search-result-list {
-  list-style-type: none;
-}
-
-.search-result-item {
-  margin-top: 20px;
-}
-
-.search-no-result-item {
-  margin-top: 20px;
-}
-
-@media screen and (max-width: 400px) {
-  .about-box {
-    top: 15%;
-    left:5%;
-    right: 5%;
-    margin: 0 auto;
-  }
-  .blog-post-box {
-    max-height: 100vh;
-    width: 300px;
-  }
-  .blog-index-photo {
-    display: none;
-  }
-  header div {
-    margin: 0;
-  }
-  header {
-    padding: 0;
-  }
-  .search-title {
-    margin: 60px 0 0 0;
-  }
-  .search-form {
-    margin: 20px 30px 0 30px;
-    width: 90%;
-  }
-} */
