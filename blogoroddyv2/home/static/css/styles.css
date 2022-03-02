@@ -113,10 +113,15 @@
   font-family: "Merriweather", serif;
 }
 
+
+
+
+
+
 /* ABOUT PAGE */
 
 .about-container {
-  margin: 20% 10%;
+  margin: 18% 10%;
   background: rgb(205, 205, 205);
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
     inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
@@ -145,6 +150,11 @@
   margin: 2%;
   color: rgb(122, 120, 120);
 }
+
+
+
+
+
 
 /* BLOG INDEX PAGE */
 
@@ -227,6 +237,47 @@
   font-family: monospace;
   font-size: 1.2rem;
 }
+
+
+
+
+
+/* BLOG PAGE */
+
+.blog__header-container {
+  text-align: center;
+  width: 60%;
+  margin: 5% auto;
+}
+
+.blog__header {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 0;
+  color: #ffe074;
+  font-family: "Merriweather", serif;
+}
+
+.blog__container {
+  width: 90%;
+  margin: 5% auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5% 10%;
+}
+
+.blog__photo-container {
+  margin: 2% auto;
+}
+
+
+
 
 
 

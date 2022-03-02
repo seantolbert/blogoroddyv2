@@ -7,7 +7,29 @@
 
 {% block content %}
 <main>
-  <div class="blog-background"></div>
+  <div class="blog__header-container">
+    <h1 class="blog__header">{{page.title}}</h1>
+  </div>
+  <div class="blog__container">
+    <div class="blog__photo-container">
+      {% image page.main_image fill-800x400 as photo %}
+      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}">
+    </div>
+    <section class="blog__content">
+      {% for block in page.body %}
+        {% if block.block_type == 'content' %}
+          {% image block.value.image width-400 %}
+            <h2>{{}}</h2>
+        {% endif %}
+      {% endfor %}
+    </section>
+  </div>
+
+
+
+
+
+  <!-- <div class="blog-background"></div>
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -32,7 +54,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </main>
 
 {% endblock content %}
