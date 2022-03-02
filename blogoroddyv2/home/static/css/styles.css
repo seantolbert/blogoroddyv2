@@ -231,10 +231,9 @@
 }
 
 .post-description {
-  margin: 5% 5% 1% 12%;
-  /* border: 2px solid black; */
+  margin: 5% 5% 1% 15%;
   font-family: monospace;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 
@@ -272,11 +271,21 @@
 }
 
 .blog__photo-container {
-  margin: 2% auto;
+  margin: 2% 3%;
+  display: flex;
+}
+
+.blog-photo {
+  margin: 0 auto;
 }
 
 .stream__photo-container {
   margin: 2% 3%;
+  display: flex;
+}
+
+.stream__photo-container img {
+  margin: 0 auto;
 }
 
 .block-content {

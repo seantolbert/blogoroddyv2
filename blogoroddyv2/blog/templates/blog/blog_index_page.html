@@ -10,7 +10,6 @@
   <div class="index__header-container">
     <h3 class="index__header">All Posts</h3>
   </div>
-
   <div class="index__container">
     {% for post in page.blogs %}
     <a class="index__post-link" href="{% pageurl post.specific %}">
@@ -25,7 +24,6 @@
         />
         <div class="post-details__container">
           <h2 class="post-heading">{{ post.specific.title }}</h2>
-          
             <h5 class="post-date">{{ post.specific.date }}</h5>
             <p class="post-description">{{ post.specific.description }}</p>
         </div>

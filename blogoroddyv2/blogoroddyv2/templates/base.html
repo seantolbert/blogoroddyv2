@@ -26,11 +26,9 @@
 
     <body>
         <div class="background"></div>
-        {% wagtailuserbar %}
         {% include 'navbar.html' %}
         {% block content %}
         {% endblock %}
-        {% include 'footer.html' %}
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/blogoroddyv2.js' %}"></script>
