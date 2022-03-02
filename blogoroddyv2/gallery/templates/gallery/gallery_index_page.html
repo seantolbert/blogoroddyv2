@@ -7,7 +7,9 @@
 
 {% block content %}
 <main>
-  <h1 class="gallery-header">Gallery</h1>
+  <div class="gallery__header-container">
+    <h1 class="gallery-header">Gallery</h1>
+  </div>
   <section class="gallery-section">
     {% for post in page.posts %}
     <div class="gallery-photo__container">

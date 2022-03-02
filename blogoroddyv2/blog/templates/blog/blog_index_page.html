@@ -14,8 +14,8 @@
   <div class="index__container">
     {% for post in page.blogs %}
     <a class="index__post-link" href="{% pageurl post.specific %}">
-    <div class="index__post">
-        {% image post.specific.main_image fill-150x150 as photo %}
+      <div class="index__post">
+        {% image post.specific.main_image fill-200x200 as photo %}
         <img
           class="index__post-image"
           src="{{ photo.url }}"
@@ -23,10 +23,11 @@
           width="{{ photo.width }}"
           height="{{photo.height}}"
         />
-        <div class="post-details">
+        <div class="post-details__container">
           <h2 class="post-heading">{{ post.specific.title }}</h2>
-          <h5 class="post-date">{{ post.specific.date }}</h5>
-          <p class="post-description">{{ post.specific.description }}</p>
+          
+            <h5 class="post-date">{{ post.specific.date }}</h5>
+            <p class="post-description">{{ post.specific.description }}</p>
         </div>
       </div>
     </a>
