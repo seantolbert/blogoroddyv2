@@ -13,48 +13,22 @@
   <div class="blog__container">
     <div class="blog__photo-container">
       {% image page.main_image fill-800x400 as photo %}
-      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}">
+      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}" />
     </div>
-    <section class="blog__content">
-      {% for block in page.body %}
-        {% if block.block_type == 'content' %}
-          {% image block.value.image width-400 %}
-            <h2>{{}}</h2>
-        {% endif %}
-      {% endfor %}
-    </section>
-  </div>
-
-
-
-
-
-  <!-- <div class="blog-background"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="display-4 text-center mt-5 py-5">{{page.title}}</h1>
-        <div class="container-fluid">
-          {% image page.main_image fill-800x400 as main_photo%}
-          <div
-            class="container-fluid d-flex justify-content-center flex-column"
-          >
-            <img
-              class="img-fluid mb-0"
-              src="{{main_photo.url}}"
-              alt="{{main_photo.title}}"
-            />
-            <p class="d-flex mb-4 justify-content-end text-muted">
-              <small>-{{page.main_image_excerpt}}</small>
-            </p>
-            <div class="font-monospace container-fluid">
-              <p class="px-4">{% include_block page.content %}</p>
-            </div>
+    <div class="blog__content">
+      {% for block in page.body %} 
+        {% if block.block_type == 'image' %}
+          <div class="stream__photo-container">
+            {% image block.value fill-800x400 %}
           </div>
-        </div>
-      </div>
+        {% elif block.block_type == 'heading' %}
+          <h1>{{block.value}}</h1>
+        {% else %}
+          <section class="block-{{ block.block_type }}">{{ block.value }}</section>
+        {% endif %} 
+      {% endfor %}
     </div>
-  </div> -->
+  </div>
 </main>
 
 {% endblock content %}

@@ -56,6 +56,10 @@ footer {
   padding-top: 20px;
 }
 
+.footer-nav__items {
+  padding-left: 0;
+}
+
 .footer-nav__items,
 .legal-text__items {
   list-style: none;
@@ -64,6 +68,7 @@ footer {
   width: 100%;
   margin-top: 1%;
 }
+
 
 .footer-nav__item {
   margin: 2% 1%;

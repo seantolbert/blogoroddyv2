@@ -22,16 +22,9 @@ class BlogPage(Page):
 
     body = StreamField(
         [
-            (
-                "content",
-                blocks.StructBlock(
-                    [
-                        ("heading", blocks.CharBlock()),
-                        ("content", blocks.RichTextBlock()),
-                        ("image", ImageChooserBlock()),
-                    ]
-                )
-            )
+            ("heading", blocks.CharBlock()),
+            ("content", blocks.RichTextBlock()),
+            ("image", ImageChooserBlock()),
         ],
         blank=True,
         null=True,
