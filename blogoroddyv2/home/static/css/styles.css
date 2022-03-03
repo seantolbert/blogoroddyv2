@@ -365,19 +365,6 @@
     z-index: -1;
 }
 
-.gallery__header-container {
-  text-align: center;
-  width: 60%;
-  margin: 5% auto;
-}
-
-.gallery-header {
-  font-size: 4rem;
-  font-weight: bold;
-  padding: 0;
-  color: #ffe074;
-  font-family: "Merriweather", serif;
-}
 
 .gallery-section {
   padding: 0.5vw;
@@ -390,6 +377,7 @@
   display: -webkit-box;
   display: flex;
   margin-bottom: 10%;
+  margin-top: 0;
 }
 
 .gallery-photo__container {
