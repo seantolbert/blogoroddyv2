@@ -11,7 +11,7 @@ body {
   /* place-items: cente; */
   min-height: 100vh;
   font-family: sans-serif;
-  color: #222;
+  color: black;
   margin: 0;
   padding: 0;
 }
@@ -46,12 +46,12 @@ body {
 
 #menuToggle a {
   text-decoration: none;
-  color: #232323;
+  color: white;
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
-  color: white;
+  color: black;
 }
 
 #menuToggle input {
