@@ -81,6 +81,7 @@ body {
   position: relative;
 
   background: white;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffe074, 0 0 40px #ffe074, 0 0 50px #ffe074, 0 0 60px #ffe074, 0 0 70px #ffe074;
   border-radius: 3px;
 
   z-index: 1;
@@ -109,15 +110,6 @@ body {
   background: white;
   
 }
-
-/* @-webkit-keyframes  {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-} */
 
 /*
  * But let's hide the middle one.
@@ -173,6 +165,24 @@ body {
 
 #menu li:hover {
   background-color: #ffe074;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    background: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffe074, 0 0 40px #ffe074, 0 0 50px #ffe074, 0 0 60px #ffe074, 0 0 70px #ffe074;
+  }
+  to {
+    background: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 /*
