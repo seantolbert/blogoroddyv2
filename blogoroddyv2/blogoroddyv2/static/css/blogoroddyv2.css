@@ -131,9 +131,9 @@ body {
  * at the top left of the screen
  */
 #menu {
-  position: absolute;
+  position: fixed;
   width: 200px;
-  margin: -100px 0 0 -75px;
+  margin: -100px 0 0 -85px;
   padding: 20px;
   padding-top: 125px;
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
