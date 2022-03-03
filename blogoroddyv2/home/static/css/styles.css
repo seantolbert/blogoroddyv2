@@ -4,7 +4,7 @@
 /* BACKGROUNDS */
 
 .home-background,
-#about-background,
+.about-background,
 .index-background,
 .search-background {
   filter: brightness(80%);
@@ -25,6 +25,7 @@
   text-align: center;
   color: #ffe074;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 
@@ -35,25 +36,9 @@
   background-image: url(../images/homepage.jpg);
 }
 
-.home__header-container {
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 60%;
-  margin: 5% auto;
-}
-
-.home__header {
-  font-size: 4rem;
-  font-weight: bold;
-  padding: 0;
-  color: #ffe074;
-  font-family: "Merriweather", serif;
-}
-
 .card-container__header {
   width: 40%;
-  margin: 15% 0 0 8%;
+  margin: 17% 0 0 8%;
   text-align: left;
   font-size: 2.5rem;
   font-family: "Lobster", cursive;
@@ -161,7 +146,7 @@
 
 /* ABOUT PAGE */
 
-#about-backgrounds {
+.about-background {
   background-image: url(../images/about.jpeg);
 }
 

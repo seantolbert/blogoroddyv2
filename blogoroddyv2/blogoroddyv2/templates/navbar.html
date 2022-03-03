@@ -1,11 +1,10 @@
 {% load static wagtailimages_tags %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-opacity-0 position-absolute w-100">
+<nav class="navbar navbar-expand-lg navbar-light bg-opacity-0 w-100">
   <div class="container-fluid">
     <a class="navbar-brand fixbar" href="/">
       <img src="{% static 'images/sun_savage.png' %}" alt="The Savage Sun" width="24" height="23" class="d-inline-block align-text-top mt-1 img-fluid">
       <span class="fonter">
-
         JUNGLES OF EL DORADO
       </span>
     </a>
@@ -15,13 +14,13 @@
     <div class="collapse navbar-collapse rounded" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 btn-group">
         <li class="nav-item p-1">
-          <a href="/blog/" class="nav-link text-white" aria-current="page">All Posts</a>
+          <a href="/blog/" class="nav-link text-white" aria-current="page"><span class="justonemore">All Posts</span></a>
         </li>
         <li class="nav-item p-1">
-          <a href="/gallery/" class="nav-link text-white" aria-current="page">Gallery</a>
+          <a href="/gallery/" class="nav-link text-white" aria-current="page"><span class="justonemore">Gallery</span></a>
         </li>
         <li class="nav-item p-1">
-          <a href="/about/" class="nav-link text-white" aria-current="page">About</a>
+          <a href="/about/" class="nav-link text-white" aria-current="page"><span class="justonemore">About</span></a>
         </li>
       </ul> 
       <form class="d-flex" action="{% url 'search' %}" method="get">
