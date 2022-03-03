@@ -39,3 +39,18 @@ nav {
 .fonter {
   color: #ffe074;;
 }
+
+.about-background {
+  background-image: url(../images/all-posts.jpeg);
+  filter: brightness(80%);
+  background-size: contain;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  zoom: -20;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}

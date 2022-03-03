@@ -6,6 +6,7 @@
 {% endblock %} 
 
 {% block content %}
+<div class="index-background"></div>
 <main>
   <div class="index__header-container">
     <h3 class="index__header">All Posts</h3>
@@ -25,7 +26,9 @@
         <div class="post-details__container">
           <h2 class="post-heading">{{ post.specific.title }}</h2>
             <h5 class="post-date">{{ post.specific.date }}</h5>
+            {% if post.specific.description %}
             <p class="post-description">{{ post.specific.description }}</p>
+            {% endif %}
         </div>
       </div>
     </a>

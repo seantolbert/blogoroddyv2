@@ -10,7 +10,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 
 class BlogPage(Page):
-    date = models.DateTimeField(default=timezone.now, blank=True, null=True)
+    date = models.DateField(default=timezone.now, blank=True, null=True)
 
     description = models.CharField(max_length=255, blank=True, null=True)
 
