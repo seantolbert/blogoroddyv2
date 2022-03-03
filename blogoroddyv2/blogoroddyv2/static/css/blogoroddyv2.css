@@ -19,7 +19,7 @@ body {
 .background {
   background-image: url(../images/background.jpg);
   filter: brightness(80%);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -30,84 +30,72 @@ body {
   z-index: -1;
 }
 
-
-
 /* NAVBAR */
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: absolute;
   top: 5%;
   left: 5%;
-  
+
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #232323;
-  
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
-  color: tomato;
+#menuToggle a:hover {
+  color: white;
 }
 
-
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 41px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -4px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: white;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -115,18 +103,26 @@ body {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: white;
+  
 }
+
+/* @-webkit-keyframes  {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} */
 
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -134,8 +130,7 @@ body {
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -143,8 +138,7 @@ body {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 200px;
   margin: -100px 0 0 -75px;
@@ -152,40 +146,41 @@ body {
   padding-top: 125px;
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
     inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
-  
-  text-align: right;
-  background: #ffe074;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   border-radius: 0 0 30px 0;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0 10px 5px;
-  font-size: 22px;
+  font-size: 1.5rem;
   border-radius: 20px;
   font-weight: bold;
+  transition: background 0.5s ease;
 }
 
 #menu li:hover {
-  background: black;
-  color: #ffe074;
+  background-color: #ffe074;
 }
 
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
 }
-
 
 /* FOOTER */
 
@@ -221,7 +216,6 @@ footer {
   margin-top: 1%;
 }
 
-
 .footer-nav__item {
   margin: 2% 1%;
   width: 70%;
@@ -245,135 +239,3 @@ footer {
   text-decoration: none;
   font-size: 0.8rem;
 }
-
-
-
-
-/* 
-.container .row {
-  width: 100%;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  place-items: center;
-}
-
-.container .row:nth-child(2) {
-  grid-template-columns: repeat(1, 1fr);
-  margin-top: 1rem;
-}
-
-.row .col {
-  height: 100%;
-  align-self: flex-start;
-}
-
-.col h3 {
-  font-size: 30px;
-  margin-bottom: 1rem;
-}
-
-ul li {
-  list-style-type: none;
-  margin: 0.75rem 0;
-}
-
-ul li a {
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  padding: 7px 10px;
-  border-radius: 5px;
-  transition: 0.4s ease;
-}
-
-ul li a:hover {
-  background-color: #5ac1d8;
-}
-
-.container .row:nth-child(2) ul {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.container .row:nth-child(2) ul li a {
-  color: #ccc;
-  font-size: 16px;
-}
-
-.container .row:nth-child(2) ul li a:hover {
-  background-color: transparent;
-}
-
-.language ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.language ul li {
-  margin: 0.5rem 0.5rem 0.5rem 0;
-}
-
-.socail ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.socail ul li {
-  margin-right: 0.5rem;
-}
-
-.socail ul li a {
-  font-size: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .container .row {
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .col h3 {
-    font-size: 24px;
-  }
-
-  .language {
-    margin: 1rem 0;
-  }
-
-  ul li a {
-    font-size: 16px;
-  }
-
-  .container .row:nth-child(2) ul li a {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .col h3 {
-    font-size: 18px;
-  }
-
-  .language {
-    margin: 0.5rem 0;
-  }
-
-  ul li a {
-    font-size: 14px;
-  }
-
-  .container .row:nth-child(2) ul li a {
-    font-size: 12px;
-  }
-} */

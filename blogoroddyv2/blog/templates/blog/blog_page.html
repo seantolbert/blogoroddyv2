@@ -22,7 +22,7 @@
             {% image block.value fill-800x400 %}
           </div>
         {% elif block.block_type == 'heading' %}
-          <h1>{{block.value}}</h1>
+          <h1 >{{block.value}}</h1>
         {% else %}
           <section class="block-{{ block.block_type }}">{{ block.value }}</section>
         {% endif %} 
