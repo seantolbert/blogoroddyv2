@@ -1,7 +1,4 @@
 *.pyc
 .DS_Store
 *.swp
-/myenv/
-/static/
-/media/
 .env
