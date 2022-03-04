@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'blogoroddyv2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blogoroddyv2',
     }
 }
@@ -172,5 +172,3 @@ WAGTAILSEARCH_BACKENDS = {
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
 
-import django_heroku
-django_heroku.settings(locals())
