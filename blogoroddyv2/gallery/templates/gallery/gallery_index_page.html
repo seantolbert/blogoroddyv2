@@ -8,7 +8,10 @@
 {% block content %}
 <main>
   <div class="gallery-background"></div>
-  <section class="gallery-section">
+  <div class="separator">
+    <hr>
+  </div>
+    <section class="gallery-section">
     {% for post in page.posts %}
     <div class="gallery-photo__container">
       <a href="{% pageurl post.specific %}" class="gallery-photo__link">
