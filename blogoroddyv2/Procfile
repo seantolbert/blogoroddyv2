@@ -1,1 +1,1 @@
-web: gunicorn blogoroddy.wsgi
+web: gunicorn blogoroddyv2.wsgi
