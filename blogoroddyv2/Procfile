@@ -1,1 +1,0 @@
-web: gunicorn blogoroddyv2.wsgi
