@@ -6,15 +6,13 @@
 {% endblock %}
 
 {% block content %}
-<main class="about-page">
-    <div class="background"></div>
-    <div class="about-box bg-light p-5">
-        <div class="container text-center">
-            <h3 class="display-5">{{page.title}}</h3>
-            <p class="about-description"><small>{{page.description}}</small></p>
-            <hr>
-            <p class="about-email">{{page.email}}</p>
-        </div>
+<main>
+    <div id="about-backgrounds"  class="about-background"></div>
+    <div class="about-container">
+        <div class="about-title">{{ page.title }}</div>
+        <div class="about-description">{{ page.description }}</div>
+        <div class="about-email">{{ page.email }}</div>
     </div>
+    <section class="tolbert">Tolbert&Co</section>
 </main>
 {% endblock %}

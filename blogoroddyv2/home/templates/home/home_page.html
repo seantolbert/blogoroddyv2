@@ -7,42 +7,24 @@
 
 {% block content %}
 <main class="home-page">
-  <div class="background"></div>
-  <div class="p-5">
-    <h1 class="mt-5 display-2 text-center title-font">{{page.headline}}</h1>
-  </div>
-  <div class="container mb-2">
-    <div class="mx-5 justify-content-center">
-      <div
-        class="shadow-lg mb-3 p-3 bg-dark bg-opacity-50 text-light row justify-content-center rounded mx-auto"
-      >
-        <h4 class="display-5">Latest Blog Posts</h4>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          {% for blog in page.blogs %}
-          <div class="col">
-            <a
-              href="{% pageurl blog.specific %}"
-              class="text-decoration-none text-black"
-            >
-              <div class="card">
-                {% image blog.specific.main_image fill-350x250 as photo %}
-                <img
-                  src="{{photo.url}}"
-                  class="card-img-top img-fluid"
-                  alt="{{photo.title}}"
-                  height="{{photo.height}}"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{{blog.specific.title}}</h5>
-                  <p><small class="card-text text-muted p-0">{{blog.specific.date}}</small></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          {% endfor %}
+  <div class="home-background"></div>
+  <h4 class="card-container__header">Latest Posts</h4>
+  <div class="card-container">
+    {% for blog in page.blogs %}
+    <div class="card">
+      {% image blog.specific.main_image fill-150x100 as photo %}
+      <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
+      <div class="card-details">
+        <h2 class="card-heading">{{blog.specific.title}}</h2>
+        <div class="card-buttons">
+          <h5 class="card-date">{{blog.specific.date}}</h5>
+          <a href="{% pageurl blog.specific %}" class="card-button">
+            Read
+          </a>
         </div>
       </div>
     </div>
+    {% endfor %}
   </div>
 </main>
 {% endblock content %}
